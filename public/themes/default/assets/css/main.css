@@ -140,6 +140,9 @@ h6, .h6 {
   margin: 0 auto;
   max-width: 100%;
 }
+.content img{
+  width: 50%;
+}
 
 .content table {
   width: 100%;
@@ -276,4 +279,14 @@ h6, .h6 {
   background: #2982ec;
   padding: 40px 0;
   text-align: center;
+}
+.footer a{
+  color: #FFF;
+}
+.footer a:hover{
+  text-decoration: underline;
+}
+.project_content .project_title{
+  font-size: 18px;
+  margin-bottom: 10px;
 }

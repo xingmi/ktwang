@@ -1,4 +1,4 @@
-<div class="container">
+<div class="container project_content">
   <div class="row">
     <div class="col-md-9">
       <ol class="breadcrumb">
@@ -10,8 +10,8 @@
         <li class="active">{{text title words="15"}}</li>
       </ol>
       <div class="page-header text-center">
-        <h1>{{title}}</h1>
-        <p class="text-muted">{{dateformat date format="YYYY年MM月DD日 HH:mm"}}　阅读量：{{reading.total}}　编辑：<a href="mailto:{{user.email}}" title="邮件联系{{user.nickname}}">{{user.nickname}}</a>        <a target="_blank" href="//shang.qq.com/wpa/qunwpa?idkey=73a31729cf977e9b310639c7338096aa3342e7ff58ecc0768a7a1576d276ada1"><img border="0" src="//pub.idqqimg.com/wpa/images/group.png" alt="空投撸币" title="空投撸币"></a></p>
+        <h1 class="project_title">{{title}}</h1>
+        <p class="text-muted">{{dateformat date format="YYYY年MM月DD日 HH:mm"}}　参与人数：{{reading.total}}　编辑：<a href="mailto:{{user.email}}" title="邮件联系{{user.nickname}}">{{user.nickname}}</a>        <a target="_blank" href="//shang.qq.com/wpa/qunwpa?idkey=73a31729cf977e9b310639c7338096aa3342e7ff58ecc0768a7a1576d276ada1"><img border="0" src="//pub.idqqimg.com/wpa/images/group.png" alt="空投撸币" title="空投撸币"></a></p>
 
       </div>
       {{#if abstract}}
