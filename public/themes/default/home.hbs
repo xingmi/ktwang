@@ -1,0 +1,64 @@
+<div class="container">
+  <div class="row">
+    <div class="col-md-9">
+      <div class="row">
+        {{#foreach lists}}
+          <div class="col-md-12">
+            <ul class="product_list">
+              <li class="row">
+                <div class="col-md-2">
+                  <img src="{{thumbnail.src}}">
+                </div>
+                <div class="col-md-10 "> 
+                  <a href="{{href}}">
+                    <h3>{{title}}</h3>
+                    <h4>{{abstract}}</h4>
+                    <h5>标签：{{tags}}<span>参与人数：{{reading.total}}</span></h5>
+                  </a>
+                </div>
+              
+              </li>
+            </ul>
+          </div>
+        {{/foreach}}
+      </div>
+    </div>
+    <div class="col-md-3 hidden-xs hidden-sm">
+      <!-- <div class="panel panel-default">
+        <div class="panel-heading">阅读总排行</div>
+        <ul class="list-group">
+          {{#foreach readingList.total limit="5"}}
+            <a href="{{href}}" class="list-group-item text-overflow">{{title}}</a>
+          {{/foreach}}
+        </ul>
+      </div>
+      <div class="panel panel-default">
+        <div class="panel-heading">阅读本月排行</div>
+        <ul class="list-group">
+          {{#foreach readingList.month limit="5"}}
+            <a href="{{href}}" class="list-group-item text-overflow">{{title}}</a>
+          {{/foreach}}
+        </ul>
+      </div>
+      <div class="panel panel-default">
+        <div class="panel-heading">阅读本周排行</div>
+        <ul class="list-group">
+          {{#foreach readingList.week limit="5"}}
+            <a href="{{href}}" class="list-group-item text-overflow">{{title}}</a>
+          {{/foreach}}
+        </ul>
+      </div> -->
+      <div class="panel panel-default">
+        <img src="/images/qq.jpg" style="width: 100%">
+      </div>
+      <div class="panel panel-default">
+        <div class="panel-heading">阅读今日排行</div>
+        <ul class="list-group">
+          {{#foreach readingList.day limit="5"}}
+            <a href="{{href}}" class="list-group-item text-overflow">{{title}}</a>
+          {{/foreach}}
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>

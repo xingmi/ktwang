@@ -1,0 +1,83 @@
+.install {
+  width: 100%; min-height: 100%;
+  padding: 40px 10px;
+  background: #2d353c;
+
+  > .brand {
+    display: block;
+    margin: 0 auto 30px;
+  }
+
+  > footer {
+    text-align: center;
+    font-size: 12px;
+    color: #777;
+
+    > a { color: #777; }
+    > a:hover { color: #fff; }
+  }
+
+  > .content {
+    width: 100%;
+    margin: 0 auto;
+    transition: all .3s ease-in-out;
+
+    &.lg {
+      width: 800px;
+    }
+
+    &.md {
+      width: 600px;
+    }
+
+    &.sm {
+      width: 400px;
+    }
+
+    .scrollable {
+      max-height: 340px;
+      overflow-y: scroll;
+    }
+
+    .install-panel {
+      &.ng-hide-remove {
+        transition: opacity .3s ease-in-out;
+        opacity: 0;
+
+        &.ng-hide-remove-active {
+          opacity: 1;
+        }
+      }
+
+      &.ng-hide-add {
+        opacity: 0;
+      }
+
+      .alert {
+        padding: 15px;
+        margin-bottom: 20px;
+        border: 1px solid transparent;
+        border-radius: 4px;
+
+        &.alert-danger {
+          color: #a94442;
+          background-color: #f2dede;
+          border-color: #ebccd1;
+        }
+      }
+
+      .text-installing {
+        color: #3787E6;
+      }
+
+      .text-welcome {
+        color: #3787E6;
+        margin: 35px 0 10px;
+      }
+    }
+
+    .panel {
+      margin-bottom: 10px;
+    }
+  }
+}

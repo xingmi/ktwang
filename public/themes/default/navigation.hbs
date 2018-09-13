@@ -1,0 +1,54 @@
+<div class="container hidden-xs">
+  <div class="row">
+    <div class="col-md-3">
+      <a class="brand" href="/" title="{{siteInfo.title}}"><img height="70" alt="{{siteInfo.title}}" src="/themes/{{siteInfo.theme}}/assets/img/logo.jpg"></a>
+    </div>
+  </div>
+</div>
+<nav class="navbar navbar-blue">
+  <div class="container">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+        <span class="sr-only">切换</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand visible-xs-block" href="/" title="{{siteInfo.title}}"><img height="20" alt="{{siteInfo.title}}" src="/themes/{{siteInfo.theme}}/assets/img/logo.jpg"></a>
+    </div>
+
+    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+      <ul class="nav navbar-nav navbar-left">
+        {{#foreach navigation}}
+          {{#if isShow}}
+            <li class="{{#if current}}active{{/if}}"><a href="{{#if path}}{{path}}{{else}}{{mixed.url}}{{/if}}" title="{{name}}">{{name}}</a></li>
+          {{/if}}
+        {{/foreach}}
+      </ul>
+      <form class="navbar-form navbar-right" action="/search" name="searchForm" autocomplete="on" role="search">
+        <div class="form-group">
+          <div class="input-group">
+            <input name="words" type="search" method="get" class="form-control" placeholder="搜索全站...">
+            <span class="input-group-btn">
+              <button class="btn btn-default" type="submit">搜索</button>
+            </span>
+          </div>
+        </div>
+      </form>
+    </div>
+  </div>
+</nav>
+{{#foreach navigation}}
+  {{#if current}}
+    {{#if nodes}}
+      <div class="container">
+        <div class="navbar-sub-category">
+          {{#foreach nodes}}
+            <a class="btn btn-link" href="{{#if path}}{{path}}{{else}}{{mixed.url}}{{/if}}" title="{{name}}" role="button">{{name}}</a>
+          {{/foreach}}
+        </div>
+        <hr>
+      </div>
+    {{/if}}
+  {{/if}}
+{{/foreach}}
